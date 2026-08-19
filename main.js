@@ -361,6 +361,22 @@ const $$ = sel => document.querySelectorAll(sel);
       }
     });
 
+    // Handle Dynamic Title for SEO/UX
+    const baseTitle = "Palmetto Counseling & Wellness";
+    if (hash === '/') {
+      document.title = `${baseTitle} | Online Therapy in Florida`;
+    } else if (hash === '/services') {
+      document.title = `Services | ${baseTitle}`;
+    } else if (hash === '/about') {
+      document.title = `About Kyle | ${baseTitle}`;
+    } else if (hash === '/approach') {
+      document.title = `My Approach | ${baseTitle}`;
+    } else if (hash === '/getting-started') {
+      document.title = `Getting Started | ${baseTitle}`;
+    } else if (hash === '/contact') {
+      document.title = `Contact | ${baseTitle}`;
+    }
+
     // Handle Scrolling
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
